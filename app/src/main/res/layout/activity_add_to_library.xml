@@ -1,0 +1,108 @@
+<!-- activity_add_to_library.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Your other views/components -->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Add other attributes as needed -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/tvimage"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/vinci" />
+
+                    <TextView
+                        android:id="@+id/tvbookName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvimage"
+                        android:layout_marginTop="16dp"
+                        android:text="Book Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvbookAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvbookName"
+                        android:layout_marginTop="8dp"
+                        android:text="Author"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvbookGenre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvbookAuthor"
+                        android:layout_marginTop="8dp"
+                        android:text="Genre"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvbookPublishDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvbookGenre"
+                        android:layout_marginTop="8dp"
+                        android:text="Publish Details"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnAddToLibraryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to Library"
+                        android:textSize="14sp"
+                        android:layout_below="@id/tvbookPublishDate"
+                        android:layout_marginTop="16dp"/>
+
+
+                    <!-- Correctly reference the ScrollView below the Button -->
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnAddToLibraryButton">
+
+                        <TextView
+                            android:id="@+id/tvSynopsis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Your long text goes here" />
+
+                    </ScrollView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
